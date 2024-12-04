@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hover Image Popup Effect</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* container CSS. */
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+        }
+
+        /* borderbox CSS. */
+        .borderbox {
+            width: max-content;
+            height: max-content;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 10px 10px;
+            border: 1px solid;
+            border-radius: 9;
+            border-radius: 8px;
+            background-color: #6A1B9A;
+        }
+
+        /* Tharrox Image CSS. */
+        #Tharroxx {
+            height: 8rem;
+            border-radius: 10px;
+            box-shadow: 4px 4px #fff;
+        }
+
+        /* text CSS. */
+        .text {
+            margin-left: 0.8rem;
+            color: #fff;
+        }
+
+        /* texth5 CSS. */
+        .text h5 {
+            margin: 10px 0;
+            font-weight: lighter;
+        }
+
+        /* buynowbtn CSS. */
+        .buynowbtn {
+            border-radius: 6px;
+            padding: 10px 15px;
+            border: none;
+        }
+
+        /* BigImagebox CSS. */
+        #BigImagebox {
+            display: none;
+            position: fixed;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* bigtharrox CSS. */
+        .bigtharrox {
+            height: 20rem;
+            border-radius: 6px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Div for container. -->
+    <div class="container">
+
+        <!-- Div for borderbox. -->
+        <div class="borderbox">
+
+            <img src="/Thar-Roxx.webp" alt="" id="Tharroxx">
+
+            <!-- Div for text. -->
+            <div class="text">
+
+                <h2>Thar Roxx</h2>
+
+                <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sint exercitationem officiis.</h5>
+
+                <button class="buynowbtn">Buy Now</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Div for Big Image. -->
+    <div id="BigImagebox">
+        <img src="/Thar-Roxx.webp" alt="" class="bigtharrox">
+    </div>
+
+    <script>
+
+        let TharRoxx = document.getElementById('Tharroxx')
+
+        let BigImageBox = document.getElementById('BigImagebox')
+
+        // EventLister for Showing image while mouse on the small image.
+        TharRoxx.addEventListener('mouseover', () => {
+            BigImageBox.style.display = 'flex'
+        })
+
+        // EventLister for Removing showing image while mouse out the small image.
+        TharRoxx.addEventListener('mouseout', () => {
+            BigImageBox.style.display = 'none'
+        })
+
+    </script>
+
+</body>
+
+</html>
